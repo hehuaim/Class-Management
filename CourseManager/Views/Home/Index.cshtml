@@ -1,0 +1,30 @@
+﻿@Model CourseManager.Models.WebsiteInfo
+
+@using CourseManager.Models
+
+@{
+    ViewBag.Title = "Home Page";
+
+    var siteInfoFromViewBag = (WebsiteInfo)ViewBag.Siteinfo;
+
+    var siteInfoFromViewData = (WebsiteInfo)ViewData["Siteinfo"];
+
+}
+
+<div class="jumbotron">
+    <h1>@Model.SiteName</h1>
+    <p>@Model.CopyRight</p>
+</div>
+
+
+<div class="jumbotron">
+    <h1>@siteInfoFromViewBag.SiteName</h1>
+    <p>@siteInfoFromViewBag.CopyRight</p>
+</div>
+
+<div class="jumbotron">
+    <h1>@siteInfoFromViewData.SiteName</h1>
+    <p>@siteInfoFromViewData.CopyRight</p>
+</div>
+
+
